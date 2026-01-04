@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.abraham.personalfinancemanagementapp"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -24,11 +24,14 @@ android {
             useSupportLibrary = true
         }
 
-        // Room schema export
-        ksp {
-            arg("room.schemaLocation", "$projectDir/schemas")
-        }
+
     }
+
+    // Room schema export - temporarily disabled due to kotlinx.serialization compatibility issue
+    // Uncomment when Room/Kotlin serialization versions are compatible
+     ksp {
+         arg("room.schemaLocation", "$projectDir/schemas")
+     }
 
     buildTypes {
         release {
@@ -150,6 +153,9 @@ dependencies {
 
     // Coil for image loading
     implementation(libs.coil.compose)
+
+    // Google Sign-In
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
 
     // Testing
     testImplementation(libs.junit)

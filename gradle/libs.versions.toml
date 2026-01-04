@@ -1,5 +1,5 @@
 [versions]
-agp = "8.13.0"
+agp = "8.13.2"
 kotlin = "2.0.21"
 coreKtx = "1.17.0"
 junit = "4.13.2"
@@ -57,6 +57,13 @@ gson = "2.11.0"
 
 # Coil
 coil = "2.7.0"
+
+# Google Sign-In
+google-sign-in = "21.2.0"
+
+# Kotlinx Serialization (required for Room schema export)
+# Using version compatible with Room 2.8.4 and Kotlin 2.0.21
+kotlinx-serialization = "1.7.3"
 
 # KSP
 ksp = "2.0.21-1.0.28"
@@ -142,6 +149,12 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 # Coil
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+# Google Sign-In
+google-sign-in = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "google-sign-in" }
+
+# Kotlinx Serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -22,7 +22,7 @@ import com.abraham.personalfinancemanagementapp.data.local.entities.*
         SavingsGoalEntity::class
     ],
     version = 1,
-    exportSchema = true
+    exportSchema = false  // Temporarily disabled due to kotlinx.serialization compatibility issue
 )
 @TypeConverters(DateConverter::class, StringListConverter::class)
 abstract class AppDatabase : RoomDatabase() {
